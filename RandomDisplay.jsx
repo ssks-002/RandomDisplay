@@ -8,7 +8,7 @@ buttongroup.orientation="row";
 
 var applybutton = buttongroup.add('button', undefined,"Apply");
 var intervalgroup = buttongroup.add("group", undefined);
-var intervaltext =  intervalgroup.add("statictext", undefined,"interval");
+var intervaltext =  intervalgroup.add("statictext", undefined,"postarization");
 intervalvalue = intervalgroup.add("edittext", undefined,  intervalvalue ? intervalvalue.text : "15");
 
 this.layout.layout();
@@ -44,9 +44,14 @@ applybutton.onClick = function (){
 
         // Calculate random numbers using seed slider value
         nullLayer.effect("Layer Control Number")(1).expression =
+            "var prevRandomValue = 1;\n" +
+            "var RandomValue;\n" +
             'seedRandom(thisLayer.effect(\"Random Control\")(1), true);\n' +
             "posterizeTime(thisLayer.effect(\"Interval Control\")(1));\n" +
-            "value = Math.floor(random(1, " + totalLayers + " + 1));"
+            "Randomvalue = Math.floor(random(1, " + totalLayers + " + 1));"
+            "if(RandomValue !== prevRandomValue) {\n"
+            "   value = Randomvalue;\n" +
+            "   }"
 
         // Process selected layer
         for (var i = 1; i <= totalLayers; i++) {
