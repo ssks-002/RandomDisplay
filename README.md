@@ -8,7 +8,7 @@ After Effects CC 2024
 
 # install
 
-Put BoundMove.jsx in Adobe > Adobe After Effect 2024 > Support Files > ScriptUI Panels directory
+Put RandomDisplay.jsx in Adobe > Adobe After Effect 2024 > Support Files > ScriptUI Panels directory
 
 # How to use
 
@@ -28,7 +28,7 @@ After Effects CC 2024
 
 # インストール
 
-BoundMove.jsxをAdobe> Adobe After Effect 2024> Support Files> ScriptUI Panelsディレクトリに入れてください
+RandomDisplay.jsxをAdobe> Adobe After Effect 2024> Support Files> ScriptUI Panelsディレクトリに入れてください
 
 # 使い方
 
